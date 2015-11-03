@@ -6,13 +6,16 @@ from flask import Flask
 # create the application object
 app = Flask(__name__)
 
+# error handling
+app.config["DEBUG"] = True
+
 # use decorators to link the function to a url
 @app.route("/")
 @app.route("/hello")
 
 # define the view using a function, which returns a string
 def hello_world():
-    return "Hello, World!"
+    return "Hello, World! asd asd "
 
 # dynamic route 
 @app.route("/test/<search_query>")
